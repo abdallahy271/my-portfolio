@@ -1,4 +1,4 @@
-# Google Software Product Sprint
+# My Portfolio
 
 This repo contains the projects you'll work on throughout SPS.
 
