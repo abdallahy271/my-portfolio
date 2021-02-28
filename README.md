@@ -1,6 +1,6 @@
-# My Portfolio
+# Yusuf's SPS Portfolio
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains the projects I'll work on throughout SPS.
 
 To get started:
 
