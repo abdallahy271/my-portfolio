@@ -1,8 +1,7 @@
 # Google Software Product Sprint
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains the projects I'll work on throughout SPS.
 
-To get started:
 
 - Login to [Google Cloud Shell](https://ssh.cloud.google.com/cloudshell/editor)
 - Clone this repo: `cd; git clone https://github.com/google/software-product-sprint.git`
