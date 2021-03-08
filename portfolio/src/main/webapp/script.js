@@ -30,4 +30,3 @@ function randomizeImage() {
   imageContainer.appendChild(imgElement);
 }
 
-
