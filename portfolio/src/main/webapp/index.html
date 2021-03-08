@@ -2,18 +2,312 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Yusuf Abdulmueez's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* I tried running this in the CSS severally but didn't work 
+    (bad practice)
+    */
+    .form-text {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-submit {
+  width: 100%;
+  background-color: #e96f92;;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label {
+    text-align: left;
+    margin:0px;
+
+}
+
+.form-submit:hover {
+  background-color: #1b2947;
+}
+
+.contact-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.text-area {
+
+  width: 100%;
+  height: 150px;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: center;    
+}
+
+#dropdown {
+    color: #ffeddb;
+    font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 40px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+#dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    </style>
+    <script>
+        // Same thing happened with my script.js-- Not running unless I use script tag (bad practice though)
+    async function showServerHello() {
+        const responseFromServer = await fetch("/get-quotes");
+        const textFromResponse = await responseFromServer.json();
+        console.log(textFromResponse)
+        const quoteIndex = Math.floor(Math.random() * 17) + 1;
+        const helloContainer = document.getElementById('hello-container');
+        const quote = textFromResponse[quoteIndex];
+        helloContainer.innerHTML = quote;
+        }
+
+    function submitForm() {
+   
+        const form = document.getElementById('form-reset');
+        form.submit(); // Submit the form
+        form.reset();  // Reset all form data
+        //return false; // Prevent page refresh
+}
+    </script>
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <div class="ScrollWrapper">
+            <header class="Header js-HasVH" data-vh="0.75">
+                <nav>
+                    <a class="x" href="#about">
+                        <span>About</span>
+                    </a>
+                    <a class="x" href="#projects">
+                        <span>Projects</span>
+                    </a>
+                    <a class="x" href="#contact">
+                        <span>Contact</span>
+                    </a>
+                    <div id="dropdown">
+                        <span class="dropbtn">Try My Apps!</span>
+                        <div class="dropdown-content">
+                            <a href="https://abdallahy271.github.io/typing-test/">Typing!</a>
+                            <a href="https://abdallahy271.github.io/todo-app/">To-do</a>
+                            <a href="https://instagram-clone-72a32.web.app/">Instagram</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="Scene">
+                    <div class="v" role="presentation"></div>
+                    <canvas class="Scene-stars" role="presentation"></canvas>
+                    <canvas class="Scene-mountains" data-stop-on-scroll="true" role="presentation"></canvas>
+                </div>
+                <h1 class="h">
+                    <span class="e d" >
+                        <span class="c" >Yusuf </span>
+                        <span class="b" >Abdulmueez</span>
+                    </span>
+                    <span class="f d" >
+                        <span class="c" >FullStack </span>
+                        <span class="b"> Developer</span>
+                    </span>
+                    <div class="a js-Lazyload" role="presentation" data-image="img/separator-green.svg"></div>
+                </h1>
+            </header>
+            <main>
+                <div class="p">
+                    <section>
+                        <h2 id="about">About</h2>
+                        <p class="q">A problem-solving enthusiast, goal driven and focused, I seek challenging opportunities in the Tech industry to work on projects where I can utilize my skills, experience, and newly-gained knowledge to ease consumers’ lives.</p>
+                        <p>I love cooking, and baking. Even though I'm a slow cooker, I find the process therapeutic. I also enjoy spending my days engrossed in novels, especially Classics... </p>
+                        <p>Click <a href="/get-quotes" >here</a> to see literature lines that keep me up daily.</p>
+                        <p >Hover <button onmouseover="showServerHello()">here</button> to see literature lines that keep me up daily.</p>
+                        <div id="hello-container" style="color:#1b2947; font-weight:bold"></div>
+                        <br/>
+                        <h3>Click here to view my favorite cities:</h3>
+                        <br/>
+                        <button class="o button" onclick="randomizeImage()">My Favorite Cities</button>
+                        <div id="random-image-container"></div> 
+      
+                    </section>
+                    <section>
+                        <h2 id="projects">Projects</h2>
+                        <div class="Works">
+                            <article class="Work">
+                                <div class="j">
+                                    <h3 class="m">
+                                        Avenue Rewards 
+                                        <div class="l"> August 2020 </div>
+                                    </h3>
+                                    <p class="k">Deployed a client-side web application with the intent of helping small businesses on the University of
+Washington avenue thrive during the COVID-19 pandemic. </p>
+                                    <div class="n">
+                                        <a class="o" href="https://recordit.co/ORgqpcOu38">View demo</a>
+                                        <a class="o" href="https://github.com/abdallahy271/ave-rewards">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/ave-rewards">
+                                    <figure class="i js-Lazyload" data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/Recordit_-_Record_screencasts_fast_free_with_GIF_Support-ORgqpcOu38.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="j">
+                                    <h3 class="m">
+                                        My Journey Website <div class="l">August 2020 </div>
+                                    </h3>
+                                    <p class="k">
+                                        Developed a full-stack website to detail my experiences and share interesting stories.
+                                    </p>
+                                    <div class="n">
+                                        <a class="o" href="https://recordit.co/lmgJQraFvi">View demo</a>
+                                        <a class="o" href="https://github.com/abdallahy271/Blog-site">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/Blog-site">
+                                    <figure class="i js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/Recordit_-_Record_screencasts_fast_free_with_GIF_Support-lmgJQraFvi.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="j">
+                                    <h3 class="m">
+                                        JP Morgan Chase Internship Experience​<div class="l">June 2020 </div>
+                                    </h3>
+                                    <p class="k">Establishing financial datafeeds and data visualization with Perspective. Frontend web development of stock trends.</p>
+                                    <div class="n">
+                                        <a class="o" href="http://g.recordit.co/fHFYAmWZcJ.gif">View demo</a>
+                                        <a class="o" href="https://github.com/abdallahy271/jp-morgan-project">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/jp-morgan-project">
+                                    <figure class="i js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/fHFYAmWZcJ.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="j">
+                                    <h3 class="m">
+                                        HEREstory<div class="l">February 2021</div>
+                                    </h3>
+                                    <p class="k">Using AR technology to give you a virtual experience of the historic places near you.</p>
+                                    <div class="n">
+                                        <a class="o" href="http://g.recordit.co/AhYkH2Trp5.gif">View demo</a>
+                                        <a class="o" href="https://github.com/abdallahy271/HEREstory">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/HEREstory">
+                                    <figure class="i js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/AhYkH2Trp5.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                    <footer>
+                        <h2 id="contact">Contact</h2>
+                        <div class="u">
+                            <div class="Contact-q">Shoot me a message and I will reply through Email</div>
+
+                           <form id="form-reset" class="contact-form" action="form-handler" method="post">
+                               <label >Name: </label>
+                                    <input class="form-text" type="text"  name="name"/> <br/>
+                                <label >Email: </label>
+                                    <input class="form-text" type="text"  name="email"/><br/>
+                                <label >Phone number: </label>
+                                    <input class="form-text" type="text"  name="number"/><br/>
+                                <textarea class="text-area form-text" placeholder="Message me..." name="message"></textarea><br/>
+                                <input class="form-submit" type="button" value="Submit" onclick="submitForm()" />
+                            </form>
+
+                            <div class="Contact-q">You can also drop me a line at</div>
+                            <a class="Email y">
+                                <strong>abdallahy271</strong>
+                                at <strong>gmail</strong>
+                                dot com
+                            </a>
+                            <div class="Contact-q">You can find me on</div>
+                            <div class="Social">
+                                <a class="y r" href="https://devpost.com/abdallahy271">
+                                    <strong>devpost</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                                <br/>
+                                <a class="y r" href="https://github.com/abdallahy271">
+                                    <strong>github</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                                <br/>
+                                <a class="y r" href="https://www.linkedin.com/in/abdulmueez-yusuf-bb434b16b/">
+                                    <strong>linkedin</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                    
+                </div>
+            </main>
+            <div class="s">
+                <canvas class="Scene-mountains t"></canvas>
+            </div>
+            <small style="padding:10px 20px; margin:0 auto; float:right">Developed by Yusuf Abdulmueez</small>
+        </div>
+    
     </div>
   </body>
 </html>
