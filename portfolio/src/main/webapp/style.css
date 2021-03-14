@@ -38,7 +38,7 @@ a {
     color: #e96f92
 }
 
-p.q {
+p.about-paragraph {
     font-size: 1.2em
 }
 
@@ -105,7 +105,7 @@ nav {
     color: #e96f92
 }
 
-.x {
+.navbar-item {
     color: #ffeddb;
     font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
     text-decoration: none;
@@ -114,13 +114,13 @@ nav {
     margin: 0 10px;
 }
 
-.x span {
+.navbar-item span {
     display: inline-block;
     padding-bottom: 10px;
     position: relative;
 }
 
-.x span::after {
+.navbar-item span::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -133,36 +133,36 @@ nav {
     transition: transform 80ms ease-in
 }
 
-.x:first-child {
+.navbar-item:first-child {
     margin-left: 0
 }
 
-.x:last-child {
+.navbar-item:last-child {
     margin-right: 0
 }
 
-.x:hover span {
+.navbar-item:hover span {
     transition: color 80ms;
     color: #e96f92;
 }
 
-.x:hover span::after {
+.navbar-item:hover span::after {
     transition: transform 80ms ease-out;
     transform: scale(1,1) translate3d(0,0,0)
 }
 
-.x:active span {
+.navbar-item:active span {
     transition: none;
     color: #54fad4;
 }
 
-.x:active span::after {
+.navbar-item:active span::after {
     background-color: #54fad4;
     transition: none;
     transform: scale(1,1.2) translate3d(0,0,0)
 }
 
-.u {
+.contact-wrapper {
     text-align: center
 }
 
@@ -181,7 +181,7 @@ nav {
     bottom: 0
 }
 
-.s {
+.Scene-mountains-wrapper {
     position: relative;
     width: 100%;
     transform: rotate(180deg);
@@ -191,7 +191,7 @@ nav {
     pointer-events: none
 }
 
-.v {
+.Scene-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -220,11 +220,11 @@ nav {
     transition: opacity 100ms
 }
 
-.t {
+.Scene-mountains {
     margin-bottom: 0
 }
 
-.h {
+.introduction {
     font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
     color: #54fad4;
     position: absolute;
@@ -239,13 +239,13 @@ nav {
     font-weight: bold
 }
 
-.e {
+.name-wrapper {
     display: block;
     height: 1em;
     margin-bottom: .2em
 }
 
-.f {
+.job-wrapper {
     display: block;
     font-size: .6em;
     color: #ffeddb;
@@ -254,20 +254,20 @@ nav {
     margin-bottom: 15px
 }
 
-.d {
+.introduction-wrapper {
     position: relative;
     width: 0;
     margin-left: auto;
     margin-right: auto
 }
 
-.c {
+.introduction-item1 {
     position: absolute;
     right: 10px;
     margin-right: -.2em
 }
 
-.b {
+.introduction-item2 {
     position: absolute;
     left: 10px
 }
@@ -316,7 +316,7 @@ h3 {
     line-height: 1
 }
 
-.p {
+.about-wrapper {
     width: 700px;
     margin: 0 auto
 }
@@ -339,11 +339,11 @@ h3 {
     margin-bottom: 30px
 }
 
-.m {
+.Work-header {
     line-height: 1.2
 }
 
-.l {
+.Work-date {
     font-family: serif;
     font-style: italic;
     font-size: 20px;
@@ -351,7 +351,7 @@ h3 {
     font-weight: normal
 }
 
-.j {
+.Work-wrapper {
     position: relative;
     display: inline-block;
     width: 50%;
@@ -362,12 +362,12 @@ h3 {
     font-size: 20px
 }
 
-.k {
+.Work-detail {
     margin-top: 1em;
     margin-bottom: 1.2em
 }
 
-.i {
+.Work-video-wrapper {
     border-radius: 2px;
     position: relative;
     display: inline-block;
@@ -382,7 +382,7 @@ h3 {
     box-shadow: 1px 4px 25px rgba(117,81,125,0.15);
 }
 
-.i img {
+.Work-video-wrapper img {
     width: 100%
 }
 
@@ -402,7 +402,7 @@ h3 {
     display: none
 }
 
-.o {
+.Work-link {
     display: inline-block;
     background: #e96f92;
     font-size: .85em;
@@ -415,29 +415,29 @@ h3 {
     transition: background 120ms,color 120ms,transform 20ms;
 }
 
-.o:hover {
+.Work-link:hover {
     background: #1b2947;
     color: #e96f92
 }
 
-.o:active {
+.Work-link:active {
     background: #54fad4;
     color: #1b2947;
     transition: none
 }
 
-.o:first-child {
+.Work-link:first-child {
     margin-right: 10px
 }
 
-.Work:nth-child(odd) .j {
+.Work:nth-child(odd) .Work-wrapper {
     left: 50%;
     text-align: left;
     padding-right: 0;
     padding-left: 25px
 }
 
-.Work:nth-child(odd) .i {
+.Work:nth-child(odd) .Work-video-wrapper {
     left: -50%;
     margin-left: -85px
 }
@@ -454,11 +454,11 @@ h3 {
     margin-top: 5px
 }
 
-.r {
+.Social-link {
     line-height: 2
 }
 
-.y {
+.contact-link {
     font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
     text-decoration: none;
     color: #1b2947;
@@ -468,40 +468,40 @@ h3 {
     transition: background-position 80ms ease-in,color 80ms;
 }
 
-.y strong {
+.contact-link strong {
     color: #e96f92;
     transition: color 80ms
 }
 
-.y:hover strong {
+.contact-link:hover strong {
     color: #1b2947
 }
 
-.y:hover {
+.contact-link:hover {
     background-position: 0 0;
     transition: background-position 80ms ease-out,color 80ms
 }
 
 @media (max-width: 950px) and (min-width:769px) {
-    .Work:nth-child(n) .i {
+    .Work:nth-child(Work-link-wrapper) .Work-video-wrapper {
         width:300px;
         height: 225px;
         margin-left: 25px
     }
 
-    .Work:nth-child(even) .j {
+    .Work:nth-child(even) .Work-wrapper {
         padding-right: 15px
     }
 }
 
 @media (max-width: 768px) {
-    .v {
+    .Scene-image {
         background-size:100% 97%;
         background-repeat: repeat-x;
         background-color: #ffeddb
     }
 
-    .x {
+    .navbar-item {
         font-size: 16px;
         margin: 0;
         padding: 10px 20px
@@ -521,14 +521,14 @@ h3 {
         margin-bottom: 60px
     }
 
-    .p {
+    .about-wrapper {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
         box-sizing: border-box
     }
 
-    .h {
+    .introduction {
         font-size: 40px
     }
 
@@ -543,22 +543,22 @@ h3 {
         transform: scale(.8,.8)
     }
 
-    .d {
+    .introduction-wrapper {
         width: 100%;
         text-align: center
     }
 
-    .c,.b {
+    .introduction-item1,.introduction-item2 {
         margin-right: 0;
         position: static
     }
 
-    .h {
+    .introduction {
         letter-spacing: 0;
         text-transform: none
     }
 
-    .f {
+    .job-wrapper {
         letter-spacing: 0;
         text-transform: none;
         font-size: .7em
@@ -569,11 +569,11 @@ h3 {
         margin-bottom: -100px
     }
 
-    .s {
+    .Scene-mountains-wrapper {
         height: 100px
     }
 
-    .t {
+    .Scene-mountains {
         margin-bottom: 0
     }
 
@@ -582,7 +582,7 @@ h3 {
         margin: 10px 0 25px 0
     }
 
-    .Work:nth-child(n) {
+    .Work:nth-child(Work-link-wrapper) {
         position: relative;
         padding-top: 340px;
         margin-bottom: 100px;
@@ -590,11 +590,11 @@ h3 {
         margin-bottom: 60px;
     }
 
-    .Work:nth-child(n):last-child {
+    .Work:nth-child(Work-link-wrapper):last-child {
         margin-bottom: 20px
     }
 
-    .Work:nth-child(n) .j,.Work:nth-child(n) .i {
+    .Work:nth-child(Work-link-wrapper) .Work-wrapper,.Work:nth-child(Work-link-wrapper) .Work-video-wrapper {
         display: block;
         margin: 0;
         left: auto;
@@ -602,13 +602,13 @@ h3 {
         padding: 0
     }
 
-    .Work:nth-child(n) .j {
+    .Work:nth-child(Work-link-wrapper) .Work-wrapper {
         width: 100%;
         text-align: center;
         font-size: 16px
     }
 
-    .Work:nth-child(n) .i {
+    .Work:nth-child(Work-link-wrapper) .Work-video-wrapper {
         position: absolute;
         top: 0;
         left: 50%;
@@ -617,7 +617,7 @@ h3 {
         height: 225px
     }
 
-    .r {
+    .Social-link {
         font-size: 18px
     }
 }
