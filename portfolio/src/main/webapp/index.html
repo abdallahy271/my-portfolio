@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Yusuf Abdulmueez's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR46XADGTWNJyLedRrfEHaj-f13iQyziA"></script>
+
     <style>
     /* I tried running this in the CSS severally but didn't work 
     (bad practice)
@@ -115,6 +117,7 @@ nav {
         //return false; // Prevent page refresh
 }
     
+    
     </script>
     <script src="script.js"></script>
   </head>
@@ -171,8 +174,10 @@ nav {
                         <h3>Click here to view my favorite cities:</h3>
                         <br/>
                         <button class="o button" onclick="randomizeImage()">My Favorite Cities</button>
-                        <div id="random-image-container"></div> 
-      
+                        <div id="container">
+                            <div id="random-image-container"></div> 
+                             
+                        </div>
                     </section>
                     <section>
                         <h2 id="projects">Projects</h2>
