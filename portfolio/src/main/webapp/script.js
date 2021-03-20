@@ -33,8 +33,8 @@ function randomizeImage() {
 async function showServerHello() {
         const responseFromServer = await fetch("/get-quotes");
         const textFromResponse = await responseFromServer.json();
-        console.log(textFromResponse)
-        const quoteIndex = Math.floor(Math.random() * 17) + 1;
+        const responseLength = textFromResponse.length;
+        const quoteIndex = Math.floor(Math.random() * responseLength) + 1;
         const helloContainer = document.getElementById('hello-container');
         const quote = textFromResponse[quoteIndex];
         helloContainer.innerHTML = quote;
