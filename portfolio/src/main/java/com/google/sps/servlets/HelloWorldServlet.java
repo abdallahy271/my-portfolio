@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Handles requests sent to the /get-quotes URL. Try running a server and navigating to /hello! */
+/** Handles requests sent to the /get-quotes URL. Try running a server and navigating to /get-quotes! */
 @WebServlet("/get-quotes")
 public class HelloWorldServlet extends HttpServlet {
 
