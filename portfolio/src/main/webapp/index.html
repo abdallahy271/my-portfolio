@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Yusuf Abdulmueez's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div id="content">
@@ -20,6 +20,14 @@
                     <a class="navbar-item" href="#contact">
                         <span>Contact</span>
                     </a>
+                    <div id="dropdown">
+                        <span class="dropbtn">Try My Apps!</span>
+                        <div class="dropdown-content">
+                            <a href="https://abdallahy271.github.io/typing-test/">Typing!</a>
+                            <a href="https://abdallahy271.github.io/todo-app/">To-do</a>
+                            <a href="https://instagram-clone-72a32.web.app/">Instagram</a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="Scene">
                     <div class="Scene-image" role="presentation"></div>
@@ -42,9 +50,13 @@
                 <div class="about-wrapper">
                     <section>
                         <h2 id="about">About</h2>
+                      
                         <p class="about-paragraph">A problem-solving enthusiast, goal driven and focused, I seek challenging opportunities in the Tech industry to work on projects where I can utilize my skills, experience, and newly-gained knowledge to ease consumers’ lives.</p>
-                        <p>I love cooking, and I learned by watching YouTube videos. I recently started baking, but I'm not that good at rolling dough. </p>
-                        <p>Click <a href="/hello" >here</a> to get greetings from my servlet.</p>
+                        <p>I love cooking, and baking. Even though I'm a slow cooker, I find the process therapeutic. I also enjoy spending my days engrossed in novels, especially Classics... </p>
+                        <p>Click <a href="/get-quotes" >here</a> to see literature lines that keep me up daily.</p>
+                        <p >Hover <button onmouseover="showServerHello()">here</button> to see literature lines that keep me up daily.</p>
+                        <div id="hello-container" style="color:#1b2947; font-weight:bold"></div>
+
                         <br/>
                         <h3>Click here to view my favorite cities:</h3>
                         <br/>
@@ -139,9 +151,13 @@ Washington avenue thrive during the COVID-19 pandemic. </p>
                     </section>
                     <footer>
                         <h2 id="contact">Contact</h2>
+
                         <div class="contact-wrapper">
-                            <div class="Contact-q">You can drop me a line at</div>
+                            <div class="Contact-q">Shoot me a message and I will reply through Email</div>
+
+                            <div class="Contact-q">You can also drop me a line at</div>
                             <a class="Email contact-link">
+
                                 <strong>abdallahy271</strong>
                                 at <strong>gmail</strong>
                                 dot com
@@ -165,11 +181,13 @@ Washington avenue thrive during the COVID-19 pandemic. </p>
                             </div>
                         </div>
                     </footer>
+                    
                 </div>
             </main>
             <div class="Scene-mountains-wrapper">
                 <canvas class="Scene-mountains"></canvas>
             </div>
+            <small style="padding:10px 20px; margin:0 auto; float:right">Developed by Yusuf Abdulmueez</small>
         </div>
     
     </div>

@@ -30,4 +30,13 @@ function randomizeImage() {
   imageContainer.appendChild(imgElement);
 }
 
+async function showServerHello() {
+        const responseFromServer = await fetch("/get-quotes");
+        const textFromResponse = await responseFromServer.json();
+        const responseLength = textFromResponse.length;
+        const quoteIndex = Math.floor(Math.random() * responseLength) + 1;
+        const helloContainer = document.getElementById('hello-container');
+        const quote = textFromResponse[quoteIndex];
+        helloContainer.innerHTML = quote;
+        }
 

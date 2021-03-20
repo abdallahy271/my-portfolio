@@ -3,6 +3,46 @@
   margin-top: 20px;
 }
 
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: center;    
+}
+
+#dropdown {
+    color: #ffeddb;
+    font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 40px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+#dropdown:hover .dropdown-content {
+  display: block;
+}
+
 body {
     background: #ffeddb;
     margin: 0;
@@ -60,7 +100,7 @@ nav {
     z-index: 2;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .ContactMenu {
@@ -621,3 +661,5 @@ h3 {
         font-size: 18px
     }
 }
+
+
