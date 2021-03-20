@@ -2,18 +2,176 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Yusuf Abdulmueez's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <div class="ScrollWrapper">
+            <header class="Header js-HasVH" data-vh="0.75">
+                <nav>
+                    <a class="navbar-item" href="#about">
+                        <span>About</span>
+                    </a>
+                    <a class="navbar-item" href="#projects">
+                        <span>Projects</span>
+                    </a>
+                    <a class="navbar-item" href="#contact">
+                        <span>Contact</span>
+                    </a>
+                </nav>
+                <div class="Scene">
+                    <div class="Scene-image" role="presentation"></div>
+                    <canvas class="Scene-stars" role="presentation"></canvas>
+                    <canvas class="Scene-mountains" data-stop-on-scroll="true" role="presentation"></canvas>
+                </div>
+                <h1 class="introduction">
+                    <span class="name-wrapper introduction-wrapper" >
+                        <span class="introduction-item1" >Yusuf </span>
+                        <span class="introduction-item2" >Abdulmueez</span>
+                    </span>
+                    <span class="job-wrapper introduction-wrapper" >
+                        <span class="introduction-item1" >FullStack </span>
+                        <span class="introduction-item2"> Developer</span>
+                    </span>
+                    <div class="a js-Lazyload" role="presentation" data-image="img/separator-green.svg"></div>
+                </h1>
+            </header>
+            <main>
+                <div class="about-wrapper">
+                    <section>
+                        <h2 id="about">About</h2>
+                        <p class="about-paragraph">A problem-solving enthusiast, goal driven and focused, I seek challenging opportunities in the Tech industry to work on projects where I can utilize my skills, experience, and newly-gained knowledge to ease consumers’ lives.</p>
+                        <p>I love cooking, and I learned by watching YouTube videos. I recently started baking, but I'm not that good at rolling dough. </p>
+                        <p>Click <a href="/hello" >here</a> to get greetings from my servlet.</p>
+                        <br/>
+                        <h3>Click here to view my favorite cities:</h3>
+                        <br/>
+                        <button class="Work-link button" onclick="randomizeImage()">My Favorite Cities</button>
+                        <div id="random-image-container"></div> 
+      
+                    </section>
+                    <section>
+                        <h2 id="projects">Projects</h2>
+                        <div class="Works">
+                            <article class="Work">
+                                <div class="Work-wrapper">
+                                    <h3 class="Work-header">
+                                        Avenue Rewards 
+                                        <div class="Work-date"> August 2020 </div>
+                                    </h3>
+                                    <p class="Work-detail">Deployed a client-side web application with the intent of helping small businesses on the University of
+Washington avenue thrive during the COVID-19 pandemic. </p>
+                                    <div class="n">
+                                        <a class="Work-link" href="https://recordit.co/ORgqpcOu38">View demo</a>
+                                        <a class="Work-link" href="https://github.com/abdallahy271/ave-rewards">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/ave-rewards">
+                                    <figure class="Work-video-wrapper js-Lazyload" data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/Recordit_-_Record_screencasts_fast_free_with_GIF_Support-ORgqpcOu38.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="Work-wrapper">
+                                    <h3 class="Work-header">
+                                        My Journey Website <div class="Work-date">August 2020 </div>
+                                    </h3>
+                                    <p class="Work-detail">
+                                        Developed a full-stack website to detail my experiences and share interesting stories.
+                                    </p>
+                                    <div class="n">
+                                        <a class="Work-link" href="https://recordit.co/lmgJQraFvi">View demo</a>
+                                        <a class="Work-link" href="https://github.com/abdallahy271/Blog-site">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/Blog-site">
+                                    <figure class="Work-video-wrapper js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/Recordit_-_Record_screencasts_fast_free_with_GIF_Support-lmgJQraFvi.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="Work-wrapper">
+                                    <h3 class="Work-header">
+                                        JP Morgan Chase Internship Experience​<div class="Work-date">June 2020 </div>
+                                    </h3>
+                                    <p class="Work-detail">Establishing financial datafeeds and data visualization with Perspective. Frontend web development of stock trends.</p>
+                                    <div class="n">
+                                        <a class="Work-link" href="http://g.recordit.co/fHFYAmWZcJ.gif">View demo</a>
+                                        <a class="Work-link" href="https://github.com/abdallahy271/jp-morgan-project">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/jp-morgan-project">
+                                    <figure class="Work-video-wrapper js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/fHFYAmWZcJ.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="Work">
+                                <div class="Work-wrapper">
+                                    <h3 class="Work-header">
+                                        HEREstory<div class="Work-date">February 2021</div>
+                                    </h3>
+                                    <p class="Work-detail">Using AR technology to give you a virtual experience of the historic places near you.</p>
+                                    <div class="n">
+                                        <a class="Work-link" href="http://g.recordit.co/AhYkH2Trp5.gif">View demo</a>
+                                        <a class="Work-link" href="https://github.com/abdallahy271/HEREstory">GitHub</a>
+                                    </div>
+                                </div>
+                                <a href="https://github.com/abdallahy271/HEREstory">
+                                    <figure class="Work-video-wrapper js-Lazyload"  data-hires="true" role="presentation">
+                                        <video class="Work-video" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" loop="loop" muted="muted" autoplay>
+                                            <source src="videos/AhYkH2Trp5.mp4" type="video/mp4"/>
+                                        </video>
+                                    </figure>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                    <footer>
+                        <h2 id="contact">Contact</h2>
+                        <div class="contact-wrapper">
+                            <div class="Contact-q">You can drop me a line at</div>
+                            <a class="Email contact-link">
+                                <strong>abdallahy271</strong>
+                                at <strong>gmail</strong>
+                                dot com
+                            </a>
+                            <div class="Contact-q">You can find me on</div>
+                            <div class="Social">
+                                <a class="contact-link Social-link" href="https://devpost.com/abdallahy271">
+                                    <strong>devpost</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                                <br/>
+                                <a class="contact-link Social-link" href="https://github.com/abdallahy271">
+                                    <strong>github</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                                <br/>
+                                <a class="contact-link Social-link" href="https://www.linkedin.com/in/abdulmueez-yusuf-bb434b16b/">
+                                    <strong>linkedin</strong>
+                                    .com/<strong>abdallahy271</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </main>
+            <div class="Scene-mountains-wrapper">
+                <canvas class="Scene-mountains"></canvas>
+            </div>
+        </div>
+    
     </div>
   </body>
 </html>
