@@ -4,67 +4,7 @@
     <meta charset="UTF-8">
     <title>Yusuf Abdulmueez's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-    /* I tried running this in the CSS severally but didn't work 
-    (bad practice)
-    */
- 
-.dropdown-content {
-  display: none;
-  background-color: #f9f9f9;
-  min-width: 140px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 8px 10px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-nav {
-    display: flex;
-    justify-content: center;    
-}
-
-#dropdown {
-    color: #ffeddb;
-    font-family: 'Avenir Next','Segoe ui',Ubuntu,sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 40px;
-    margin: 0 10px;
-    display: inline-block;
-}
-
-#dropdown:hover .dropdown-content {
-  display: block;
-}
-
-    </style>
-    <script>
-        // Same thing happened with my script.js-- Not running unless I use script tag (bad practice though)
-    async function showServerHello() {
-        const responseFromServer = await fetch("/get-quotes");
-        const textFromResponse = await responseFromServer.json();
-        console.log(textFromResponse)
-        const quoteIndex = Math.floor(Math.random() * 17) + 1;
-        const helloContainer = document.getElementById('hello-container');
-        const quote = textFromResponse[quoteIndex];
-        helloContainer.innerHTML = quote;
-        }
-
-    
-    </script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div id="content">
