@@ -1,6 +1,18 @@
 
-#greeting-container {
-  margin-top: 20px;
+#random-image-container img{
+  object-fit: fill;
+  width: 500px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
 }
 
 body {
